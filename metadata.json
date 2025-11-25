@@ -1,0 +1,5 @@
+{
+  "name": "Semáforo de la Información Personal",
+  "description": "Una actividad interactiva para que los alumnos aprendan a clasificar qué información personal es segura, de riesgo o prohibida de compartir en redes sociales, usando un sistema de semáforo.",
+  "requestFramePermissions": []
+}
