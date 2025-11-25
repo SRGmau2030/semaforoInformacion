@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import { CardData, Category, Columns } from './types';
 import { INITIAL_CARDS, shuffle } from './constants';

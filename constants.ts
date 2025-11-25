@@ -1,4 +1,3 @@
-
 import { CardData } from './types';
 
 export const INITIAL_CARDS: CardData[] = [
@@ -15,7 +14,7 @@ export const INITIAL_CARDS: CardData[] = [
   { id: 11, text: 'Tu número de teléfono', correctCategory: 'red' },
   { id: 12, text: 'Tu contraseña', correctCategory: 'red' },
   { id: 13, text: 'Ubicación actual', correctCategory: 'red' },
-  { id: 14, text: 'Una foto de credencial escorlar', correctCategory: 'red' },
+  { id: 14, text: 'Una foto de la credencial escolar', correctCategory: 'red' },
 ];
 
 // Function to shuffle an array

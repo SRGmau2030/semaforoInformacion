@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CardData, Category } from '../types';
 import Card from './Card';

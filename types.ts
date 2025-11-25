@@ -1,4 +1,3 @@
-
 export type Category = 'deck' | 'green' | 'yellow' | 'red';
 
 export type CorrectCategory = 'green' | 'yellow' | 'red';
