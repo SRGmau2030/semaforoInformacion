@@ -31,9 +31,9 @@ const Column: React.FC<ColumnProps> = ({
     e.preventDefault();
     onDrop(category);
   };
-  
+
   const headerClasses = `p-3 font-bold text-center text-lg ${
-    isDeck ? 'text-blue-800' : 
+    isDeck ? 'text-blue-800' :
     category === 'green' ? 'text-green-800' :
     category === 'yellow' ? 'text-yellow-800' :
     'text-red-800'
@@ -59,7 +59,7 @@ const Column: React.FC<ColumnProps> = ({
             ))
           ) : (
             <div className="flex items-center justify-center h-full">
-              <span className="text-gray-400 italic">Arrastra una tarjeta aquí</span>
+              <span className="text-gray-400 italic">Arrastra un alimento aquí</span>
             </div>
           )}
         </div>

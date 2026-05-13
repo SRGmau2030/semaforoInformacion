@@ -88,24 +88,34 @@ const App: React.FC = () => {
   };
 
   const columnConfig = [
-    { category: 'green' as Category, title: 'VERDE: Seguro', bgColor: 'bg-green-100', borderColor: 'border-green-500' },
-    { category: 'yellow' as Category, title: 'AMARILLO: Riesgo', bgColor: 'bg-yellow-100', borderColor: 'border-yellow-500' },
-    { category: 'red' as Category, title: 'ROJO: Prohibido', bgColor: 'bg-red-100', borderColor: 'border-red-500' },
+    { category: 'green' as Category, title: '🟢 VERDE: Come libremente', bgColor: 'bg-green-100', borderColor: 'border-green-500' },
+    { category: 'yellow' as Category, title: '🟡 AMARILLO: Con moderación', bgColor: 'bg-yellow-100', borderColor: 'border-yellow-500' },
+    { category: 'red' as Category, title: '🔴 ROJO: Evita', bgColor: 'bg-red-100', borderColor: 'border-red-500' },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center p-4 sm:p-8 font-sans">
-      <header className="text-center mb-6">
-        <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">🚦 El Semáforo de la Información Personal</h1>
-        <p className="text-lg text-gray-600 mt-2 max-w-3xl">
-          Arrastra cada tarjeta a la columna correcta para aprender qué información es segura, de riesgo o prohibida de compartir en línea.
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-green-50 flex flex-col items-center p-4 sm:p-8 font-sans">
+      <header className="text-center mb-6 max-w-4xl">
+        <div className="text-6xl mb-4">🍽️</div>
+        <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
+          El Semáforo del <span className="text-green-600">Plato</span> del{' '}
+          <span className="text-yellow-600">Bien</span> <span className="text-red-600">Comer</span>
+        </h1>
+        <p className="text-lg text-gray-600 mt-2 max-w-3xl mx-auto">
+          Arrastra cada alimento a la columna correcta según el Plato del Bien Comer de México.
+          ¡Aprende a comer saludablemente!
         </p>
+        <div className="flex justify-center gap-6 mt-4 text-sm text-gray-500">
+          <span>🥗 <strong>Verde:</strong> Libre consumo</span>
+          <span>⚖️ <strong>Amarillo:</strong> Moderado</span>
+          <span>🚫 <strong>Rojo:</strong> Evitar</span>
+        </div>
       </header>
       
-      <main className="w-full flex flex-col lg:flex-row gap-6">
+      <main className="w-full flex flex-col lg:flex-row gap-6 max-w-7xl">
         <Column
           category="deck"
-          title="Tarjetas por clasificar"
+          title="📦 Alimentos por clasificar"
           bgColor="bg-blue-100"
           borderColor="border-blue-500"
           cards={columns.deck}
@@ -134,32 +144,35 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      <footer className="mt-8 flex items-center gap-4">
+      <footer className="mt-8 flex items-center gap-4 flex-wrap justify-center">
         <button
           onClick={handleCheckAnswers}
-          className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition-transform transform hover:scale-105"
+          className="px-8 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl shadow-md hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75 transition-all transform hover:scale-105 active:scale-95"
         >
-          Revisar Respuestas
+          ✅ Revisar Respuestas
         </button>
         <button
           onClick={handleReset}
-          className="px-8 py-3 bg-gray-300 text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75 transition-transform transform hover:scale-105"
+          className="px-8 py-3 bg-gradient-to-r from-gray-300 to-gray-400 text-gray-800 font-semibold rounded-xl shadow-md hover:from-gray-400 hover:to-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75 transition-all transform hover:scale-105 active:scale-95"
         >
-          Reiniciar
+          🔄 Reiniciar
         </button>
       </footer>
 
       {showSuccessModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-8 rounded-xl shadow-2xl text-center transform transition-all scale-95 animate-pulse-in">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
+          <div className="bg-white p-8 rounded-2xl shadow-2xl text-center transform transition-all scale-95 animate-pulse-in max-w-md">
             <div className="text-6xl mb-4">🎉</div>
             <h2 className="text-2xl font-bold text-gray-800 mb-2">¡Excelente Trabajo!</h2>
-            <p className="text-gray-600 mb-6">Has clasificado toda la información correctamente. ¡Ahora sabes cómo protegerte en línea!</p>
+            <p className="text-gray-600 mb-6">
+              Has clasificado todos los alimentos correctamente según el Plato del Bien Comer. 
+              ¡Ahora sabes cómo alimentarte saludablemente!
+            </p>
             <button
               onClick={handleReset}
-              className="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
+              className="px-6 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl shadow-md hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 transition-all transform hover:scale-105 active:scale-95"
             >
-              Jugar de Nuevo
+              🎮 Jugar de Nuevo
             </button>
           </div>
         </div>
