@@ -102,7 +102,7 @@ const App: React.FC = () => {
           <span className="text-yellow-600">Bien</span> <span className="text-red-600">Comer</span>
         </h1>
         <p className="text-lg text-gray-600 mt-2 max-w-3xl mx-auto">
-          Arrastra cada alimento a la columna correcta según el Plato del Bien Comer de México.
+          Arrastra cada alimento a la columna correcta según el Plato del Bien Comer.
           ¡Aprende a comer saludablemente!
         </p>
         <div className="flex justify-center gap-6 mt-4 text-sm text-gray-500">
